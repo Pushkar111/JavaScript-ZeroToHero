@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseup events</title>
+</head>
+
+<body>
+    <h1>mouseup : Fired when a mouse button is released.</h1>
+
+    <button type="button" id="btn">click</button>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener("mouseup", function () {
+            alert("Mouse button is released");
+        });
+    </script>
+</body>
+
+</html>

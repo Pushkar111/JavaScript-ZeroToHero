@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="clipboard-container">
+        <h1>Clipboard Events</h1>
+        <p>Related to copying, cutting, and pasting.</p>
+        <h2>Examples:</h2>
+        <ul>
+            <li>copy : Fired when content is copied.</li>
+            <li>cut : Fired when content is cut.</li>
+            <li>paste : Fired when content is pasted.</li>
+        </ul>
+        <div class="clipboard-section">
+            <label for="copyInput">Copy Input:</label>
+            <input type="text" id="copyInput" value="Copy this text">
+            <button id="copyButton">Copy</button>
+            <p id="copyMessage" class="message"></p>
+        </div>
+
+        <div class="clipboard-section">
+            <label for="cutInput">Cut Input:</label>
+            <input type="text" id="cutInput" value="Cut this text">
+            <button id="cutButton">Cut</button>
+            <p id="cutMessage" class="message"></p>
+        </div>
+
+        <div class="clipboard-section">
+            <label for="pasteInput">Paste Input:</label>
+            <input type="text" id="pasteInput" placeholder="Paste here">
+            <p id="pasteMessage" class="message"></p>
+        </div>
+    </div>
+
+    <script src="copy.js"></script>
+    <script src="cut.js"></script>
+    <script src="paste.js"></script>
+</body>
+
+</html>

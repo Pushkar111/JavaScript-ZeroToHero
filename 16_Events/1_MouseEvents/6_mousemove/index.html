@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: mediumaquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="square" onmousemove="checkData()"></div>
+
+    <script>
+        var count = 0;
+        const checkData = () => {
+            count++;
+            console.log('Mouse move event');
+            console.log(count);
+        }
+    </script>
+</body>
+
+</html>

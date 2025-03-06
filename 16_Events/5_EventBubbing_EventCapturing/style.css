@@ -1,0 +1,29 @@
+.container {
+    height: fit-content;
+    width: fit-content;
+    /* border: 2px solid; */
+}
+
+.green {
+    height: 300px;
+    width: 300px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pink {
+    height: 200px;
+    width: 200px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skyBlue {
+    height: 100px;
+    width: 100px;
+    background-color: skyblue;
+}
