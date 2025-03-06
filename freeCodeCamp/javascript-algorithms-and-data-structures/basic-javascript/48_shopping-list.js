@@ -1,0 +1,1 @@
+const myList = [["iPhone", 3],["Samsung", 1],["Nokia",12],["Nothing", 11],["OnePlus", 7]];

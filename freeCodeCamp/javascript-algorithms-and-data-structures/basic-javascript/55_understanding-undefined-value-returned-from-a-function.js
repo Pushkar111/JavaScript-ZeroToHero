@@ -1,0 +1,17 @@
+// Setup
+let sum = 0;
+
+function addThree() {
+  sum = sum + 3;
+  addFive(sum);
+}
+
+// Only change code below this line
+function addFive() {
+  sum += 5;
+}
+
+// Only change code above this line
+
+addThree();
+console.log(sum);
