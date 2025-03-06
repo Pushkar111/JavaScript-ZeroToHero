@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus on Today</title>
+    <link rel="stylesheet" href="../src/assets/css/style.css">
+    <script src="../src/components/app.js" defer></script>
+</head>
+
+<body>
+    <div class="container"><!-- main -->
+        <h1 class="title"><span class="headTextChangeColour">Focus on</span> Today</h1>
+        <form class="form-container">
+            <h2 class="sub-title">
+                <span>Today</span>
+                <img class="sun-icon" src="../src/assets/images/Sun.png" alt="sun" />
+            </h2>
+            <p class="progress-label">Raise the bar by completing your goals!</p>
+            <div class="progress-bar">
+                <div class="progress-value">
+                    <span>2/3 Completed</span>
+                </div>
+                <p class="error-label">Please set all the 3 goals!</p>
+            </div>
+            <div class="add-goal-container">
+                <div class="custom-checkbox">
+                    <img class="check-icon" src="../src/assets/images/check-icon.png" alt="check-icon" />
+                </div>
+                <input id="first" class="goal-input" type="text" placeholder="Add new goal... " />
+            </div>
+            <div class="add-goal-container">
+                <div class="custom-checkbox">
+                    <img class="check-icon" src="../src/assets/images/check-icon.png" alt="check-icon" />
+                </div>
+                <input id="second" class="goal-input" type="text" placeholder="Add new goal... " />
+            </div>
+            <div class="add-goal-container">
+                <div class="custom-checkbox">
+                    <img id="third" class="check-icon" src="../src/assets/images/check-icon.png" alt="check-icon" />
+                </div>
+                <input class="goal-input" type="text" placeholder="Add new goal... " />
+            </div>
+            <p class="quote">“Move one step ahead, today!”</p>
+            <p class="caption">Made with ❤️ by Pushkar Modi</p>
+        </form>
+    </div>
+</body>
+
+</html>

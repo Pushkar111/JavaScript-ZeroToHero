@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Blood Donation Form</h1>
+    <form id="donationForm">
+        <fieldset>
+            <legend>Donor Information</legend>
+            <label for="name">Donor Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="nameError" class="error" style="display: none;"></span>
+            <br><br>
+
+            <label for="age">Donor Age:</label>
+            <input type="number" id="age" name="age" required>
+            <span id="ageError" class="error" style="display: none;"></span>
+            <br><br>
+
+            <label for="bloodGroup">Blood Group:</label>
+            <input type="text" id="bloodGroup" name="bloodGroup" required>
+            <span id="bloodGroupError" class="error" style="display: none;"></span>
+            <br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <span id="genderError" class="error" style="display: none;"></span>
+            <br><br>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+            <span id="weightError" class="error" style="display: none;"></span>
+            <br><br>
+
+            <label for="disease">Any Disease:</label>
+            <input type="text" id="disease" name="disease">
+            <br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>

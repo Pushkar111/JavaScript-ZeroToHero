@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Heebo;
+    background-color: #DECDAC;
+}
+
+.card-container,
+.pop-btn {
+    /* center of body */
+    position: absolute;
+    inset: 0;
+    margin: auto;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-btn {
+    width: 187px;
+    height: 41px;
+    border-radius: 1.4rem;
+    background-color: #EBBF53;
+    color: #FEFAF3;
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        cursor: pointer;
+        background-color: #D9A84D;
+        transition: background-color 0.3s ease;
+    }
+}
+
+.pointer-icon {
+    width: 45.73px;
+    height: 59.04px;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+.pointer-icon img {
+    width: 80%;
+    height: 80%;
+}
+
+.before-popup {
+    height: 243.2px;
+    width: 485px;
+    background-color: #FEFAF3;
+    border-radius: 28.82px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 1;
+    transform-origin: center center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.widther {
+    width: fit-content;
+    display: none;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center center;
+    transition: transform 0.5s ease-in-out;
+    opacity: 0; */
+}
+
+#overlay {
+    width: 690px;
+    height: 346px;
+    background-color: #FEFAF3;
+    border-radius: 2.5rem;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    transition: all 0.5s ease-in-out;
+    /* position: absolute; */
+}
+
+.tool-section {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.logo-container {
+    height: 218.1px;
+    width: 213px;
+    position: relative;
+}
+
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -34px;
+}
+
+.card-content {
+    font-family: Inika;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-icon {
+    position: absolute;
+    top: 18px;
+    right: 35px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.card-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #3D3D3D;
+}
+
+.card-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #3D3D3D;
+    margin: 1rem 0;
+}
+
+/* input field with subscribe button */
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.input-wrapper {
+    width: fit-content;
+    height: 45px;
+    border-radius: 20px;
+    padding: 5px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    background-color: #EEE8DD;
+}
+
+.icon {
+    width: 30px;
+    fill: #3d3d3dc8;
+    margin-left: 8px;
+    transition: all 0.3s;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    background-color: #EEE8DD;
+    color: #3D3D3D;
+    font-size: 1em;
+}
+
+.input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #EEE8DD inset;
+    -webkit-text-fill-color: #3D3D3D;
+}
+
+.Subscribe-btn {
+    height: 100%;
+    width: 135px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    background-color: #EBBF53;
+    font-weight: 500;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.arrow {
+    /* display: none; */
+    position: absolute;
+    margin-right: 150px;
+    transition: all 0.3s;
+}
+
+.input-wrapper:active .icon {
+    transform: scale(1.3);
+}
+
+.Subscribe-btn:hover {
+    color: #EBBF53;
+}
+
+.Subscribe-btn:hover .arrow {
+    margin-right: 0;
+    animation: jello-vertical 0.9s both;
+    transform-origin: right;
+}
+
+@keyframes jello-vertical {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    40% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    50% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+
+    65% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    75% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.Subscribe-btn:active {
+    transform: scale(0.9);
+}
+
+/* ===========================================
+                Footer
+============================================== */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #858585;
+    font-size: 1rem;
+    font-family: Poppins;
+}
+
+
+/* ===========================================
+                Scripts
+============================================== */
+
+.show {
+    display: block;
+    animation: expandOverlay 0.5s ease-in-out forwards;
+}
+
+.hide {
+    animation: collapseOverlay 0.5s ease-in-out forwards;
+}
+
+@keyframes expandOverlay {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: center center;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        transform-origin: center center;
+    }
+}
+
+@keyframes collapseOverlay {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        transform-origin: center center;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: center center;
+    }
+}

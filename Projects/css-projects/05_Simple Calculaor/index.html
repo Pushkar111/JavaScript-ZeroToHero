@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple Calculator</h1>
+        <label for="No1">No1:</label>
+        <input type="number" id="No1" placeholder="Enter No1" required>
+
+        <label for="No2">No2:</label>
+        <input type="number" id="No2" placeholder="Enter No2" required>
+
+        <div class="button-container">
+            <button class="btn" onclick="calculate('add')">Add</button>
+            <button class="btn" onclick="calculate('sub')">Subtract</button>
+            <button class="btn" onclick="calculate('mult')">Multiply</button>
+            <button class="btn" onclick="calculate('div')">Divide</button>
+        </div>
+
+        <div class="result" id="result"></div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
