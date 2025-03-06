@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : document.getElementsByClassName()</title>
+</head>
+
+<style>
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        object-fit: contain, cover;
+        margin: 10px;
+    }
+
+    p {
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <h1>DOM : document.getElementsByClassName()</h1>
+
+    <div class="parent">
+        <img class="Normal-image" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=2573&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Random Nature Image 1">
+        <img class="Normal-image" src="https://images.unsplash.com/photo-1530488586170-43cf29d7705b?q=80&w=1971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Random Nature Image 2">
+        <img class="Normal-image" src="https://images.unsplash.com/photo-1439871846984-851e435a999b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Random Nature Image 3">
+        <img class="Normal-image" src="https://images.unsplash.com/photo-1580184480897-ad05a3443d44?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Random Nature Image 4">
+        <img class="colour-image" src="https://images.unsplash.com/photo-1656055449458-b5da9d3bb8b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGxhaW4lMjBub3JtYWwlMjBjb2xvdXIlMjBpbWclMjByZWQlMjB5ZWxsb3d8ZW58MHx8MHx8fDA%3D" alt="Random Nature Image 5">
+        <img class="colour-image" src="https://images.unsplash.com/photo-1604079681864-c6fbd7eb109c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGxhaW4lMjBub3JtYWwlMjBjb2xvdXIlMjBpbWclMjByZWQlMjB5ZWxsb3d8ZW58MHx8MHx8fDA%3D" alt="Random Nature Image 6">
+        <img class="colour-image" src="https://plus.unsplash.com/premium_photo-1675738775295-dffbbd2e6f34?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYWluJTIwbm9ybWFsJTIwY29sb3VyJTIwaW1nJTIwcmVkJTIweWVsbG93fGVufDB8fDB8fHww" alt="Random Nature Image 7">
+        <img class="colour-image" src="https://images.unsplash.com/photo-1607513746994-51f730a44832?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBsYWluJTIwbm9ybWFsJTIwY29sb3VyJTIwaW1nJTIwcmVkJTIweWVsbG93fGVufDB8fDB8fHww" alt="Random Nature Image 8">
+    </div>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <p>This is a third paragraph.</p>
+    <p>This is a fourth paragraph.</p>
+    <p>This is a fifth paragraph.</p>
+    <p>This is a sixth paragraph.</p>
+    <p>This is a seventh paragraph.</p>
+    <p>This is a eighth paragraph.</p>
+
+
+    <script src="script.js"></script>
+
+    <script src="demo.js"></script>
+</body>
+
+</html>

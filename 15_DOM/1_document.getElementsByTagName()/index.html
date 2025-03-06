@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : document.getElementsByTagName()</title>
+</head>
+
+<style>
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        object-fit: contain, cover;
+        margin: 10px;
+    }
+
+    p {
+        margin: 10px;
+    }
+
+    .demo {
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>DOM : document.getElementsByTagName()</h1>
+
+    <div class="parent">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=2573&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Random Nature Image 1">
+        <img src="https://images.unsplash.com/photo-1530488586170-43cf29d7705b?q=80&w=1971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Random Nature Image 2">
+        <img src="https://images.unsplash.com/photo-1439871846984-851e435a999b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEwfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Random Nature Image 3">
+        <img src="https://images.unsplash.com/photo-1580184480897-ad05a3443d44?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Random Nature Image 4">
+        <img src="https://images.unsplash.com/photo-1560851691-ebb64b584d3d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE4fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Random Nature Image 5">
+        <img src="https://images.unsplash.com/photo-1709733167460-38fa7bc94882?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIxfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Random Nature Image 6">
+        <img src="https://images.unsplash.com/photo-1526818614391-390bc085968b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI4fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Random Nature Image 7">
+        <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMxfDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D" alt="Random Nature Image 8">
+    </div>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <p>This is a third paragraph.</p>
+    <p>This is a fourth paragraph.</p>
+    <p>This is a fifth paragraph.</p>
+    <p>This is a sixth paragraph.</p>
+    <p>This is a seventh paragraph.</p>
+    <p>This is a eighth paragraph.</p>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

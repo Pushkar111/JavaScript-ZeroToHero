@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Style using JS</title>
+</head>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .greenBg {
+        background-color: #28a745;
+    }
+
+    .wavyText {
+        font-style: italic;
+        text-decoration: wavy underline;
+        text-decoration-color: #007bff;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div class="container">
+            <h1 id="title">Random HTML Page</h1>
+            <p id="description">This is a randomly generated HTML page.</p>
+            <button type="button" onclick="changeStyle()">Change Style</button>
+            <br><br>
+            <a href="#" target="_blank">Example Link 1</a>
+            <a href="#" target="_blank">Example Link 2</a>
+        </div>
+        <br>
+        <div class="container">
+            <p id="myPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vitae et alias voluptatibus,
+                repellat
+                atque distinctio. Cumque quaerat obcaecati quae facilis quam ab? Explicabo ducimus incidunt fuga
+                consectetur, tempora id.</p>
+            <hr>
+            <p id="yourPara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, eius!</p>
+            <hr>
+            <!-- // Applied style using Given class by className -->
+            <p id="yourPara2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, eius!</p>
+            <hr>
+            <p id="yourPara3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, eius!</p>
+
+        </div>
+        <br>
+
+        <!-- // add and remove class using classList -->
+        <div class="container">
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

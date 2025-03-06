@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : document.querySelector()</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #0e101c;
+        color: #f4f0ff;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* From Uiverse.io by TaniaDou */
+    .button {
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #f4f0ff;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .button::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5rem;
+        background: linear-gradient(180deg,
+                rgba(8, 77, 126, 0) 0%,
+                rgba(8, 77, 126, 0.42) 100%),
+            rgba(47, 255, 255, 0.24);
+        box-shadow: inset 0 0 12px rgba(151, 200, 255, 0.44);
+        z-index: -1;
+    }
+
+    .button::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg,
+                rgba(8, 77, 126, 0) 0%,
+                rgba(8, 77, 126, 0.42) 100%),
+            rgba(47, 255, 255, 0.24);
+        box-shadow: inset 0 0 12px rgba(151, 200, 255, 0.44);
+        border-radius: 0.5rem;
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.3s ease-in;
+    }
+
+    .button:hover::after {
+        opacity: 1;
+    }
+
+    .button-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5rem;
+        z-index: -1;
+    }
+
+    .button-border::before {
+        content: "";
+        position: absolute;
+        border-radius: 0.5rem;
+        padding: 1px;
+        inset: 0;
+        background: linear-gradient(180deg,
+                rgba(184, 238, 255, 0.24) 0%,
+                rgba(184, 238, 255, 0) 100%),
+            linear-gradient(0deg, rgba(184, 238, 255, 0.32), rgba(184, 238, 255, 0.32));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    /* From Uiverse.io by gharsh11032000 */
+    .animated-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 16px 36px;
+        border: 4px solid;
+        border-color: transparent;
+        font-size: 16px;
+        background-color: inherit;
+        border-radius: 100px;
+        font-weight: 600;
+        color: greenyellow;
+        box-shadow: 0 0 0 2px greenyellow;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button svg {
+        position: absolute;
+        width: 24px;
+        fill: greenyellow;
+        z-index: 9;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button .arr-1 {
+        right: 16px;
+    }
+
+    .animated-button .arr-2 {
+        left: -25%;
+    }
+
+    .animated-button .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background-color: greenyellow;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button .text {
+        position: relative;
+        z-index: 1;
+        transform: translateX(-12px);
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button:hover {
+        box-shadow: 0 0 0 12px transparent;
+        color: #212121;
+        border-radius: 12px;
+    }
+
+    .animated-button:hover .arr-1 {
+        right: -25%;
+    }
+
+    .animated-button:hover .arr-2 {
+        left: 16px;
+    }
+
+    .animated-button:hover .text {
+        transform: translateX(12px);
+    }
+
+    .animated-button:hover svg {
+        fill: #212121;
+    }
+
+    .animated-button:active {
+        scale: 0.95;
+        box-shadow: 0 0 0 4px greenyellow;
+    }
+
+    .animated-button:hover .circle {
+        width: 220px;
+        height: 220px;
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <h1>DOM : document.querySelector()</h1>
+
+    <div id="normal-btn" class="button">Button<span class="button-border"></span></div>
+
+    <br><br><br>
+    <button id="print-btn" class="animated-button">
+        <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+            </path>
+        </svg>
+        <span class="text">Print Button</span>
+        <span class="circle"></span>
+        <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+            </path>
+        </svg>
+    </button>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

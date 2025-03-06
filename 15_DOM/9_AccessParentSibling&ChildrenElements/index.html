@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Parent Sibling & Children Elements</title>
+</head>
+
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        border: 2px solid black;
+    }
+
+    .demo {
+        width: 100px;
+        height: 100px;
+        background-color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="demo">1</div>
+        <div class="demo">2</div>
+        <div class="demo">3</div>
+        <div class="demo">4</div>
+        <div class="demo">5</div>
+        <div class="demo">6</div>
+        <div class="demo">7</div>
+        <div class="demo">8</div>
+        <div class="demo">9</div>
+        <div class="demo">10</div>
+    
+    </div>
+    
+    <output><em>Not calculated.</em></output>
+    <script src="script.js"></script>
+</body>
+
+</html>
