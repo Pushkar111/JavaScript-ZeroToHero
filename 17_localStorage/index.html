@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>Local Storage</h1>
+    <p>when page is refresh then data could not lose if we are using localStorage</p>
+
+    <input type="text" id="nameInput" placeholder="Enter the Name">
+    <br><br>
+    <input type="number" id="ageInput" placeholder="Enter the Age">
+    <h5>my name is <span id="name-title" class="entryFromLocalStorage"></span></h5>
+    <h5>I am <span id="age-title" class="entryFromLocalStorage"></span> years old</h5>
+
+    <br><br>
+
+    <form action="" class="form-container">
+        <fieldset>
+            <legend class="form-title">Employees Details</legend>
+            <div class="form-group">
+                <label for="empId">ID:</label>
+                <input type="number" id="empId">
+            </div>
+            <div class="form-group">
+                <label for="empName">Name:</label>
+                <input type="text" id="empName">
+            </div>
+            <div class="form-group">
+                <label for="empSalary">Salary:</label>
+                <input type="number" id="empSalary">
+            </div>
+            <button type="submit" class="submit-btn">
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+                <span class="circle4"></span>
+                <span class="circle5"></span>
+                <span class="text">Submit</span>
+            </button>
+            <div id="result"></div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
