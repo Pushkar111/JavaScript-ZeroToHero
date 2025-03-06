@@ -1,0 +1,38 @@
+Promises in JavaScript:
+-----------------------
+
+1. Definition:
+    - A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+
+2. States:
+    - Pending: Initial state, neither fulfilled nor rejected.
+    - fulfilled: Operation successful 
+    - Resolved: The promise has been fulfilled and has a value.
+    - Rejected: Operation failed.
+
+3. Methods:
+    - `then()`: Executes when the promise is fulfilled.
+    - `catch()`: Executes when the promise is rejected.
+    - `finally()`: Executes regardless of the promise's outcome.
+
+4. Example:
+    let promise = new Promise((resolve, reject) => {
+         // Asynchronous operation
+         let success = true;
+         if (success) {
+              resolve("Operation successful");
+         } else {
+              reject("Operation failed");
+         }
+    });
+
+    promise.then((message) => {
+         console.log(message);
+    }).catch((error) => {
+         console.error(error);
+    }).finally(() => {
+         console.log("Operation completed");
+    });
+
+5. Use Cases:
+    - Handling asynchronous operations like API calls, file reading, etc.
