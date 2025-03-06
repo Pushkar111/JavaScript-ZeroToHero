@@ -1,0 +1,16 @@
+7_Json >> json8.js >>
+
+Object.seal(user);
+
+
+// in this case
+// delete user.preferences // false
+// console.log(user)
+
+// but for nested json or  array we can still delete or add properties
+
+// delete user.preferences.newsletter; // true
+// console.log(user.preferences)
+
+
+doubt ==> How can we prevents nested  objects from being deleted or modified?
